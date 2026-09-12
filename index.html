@@ -3,61 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Color Palette</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-    }
-
-    .container {
-      width: min(900px, 90%);
-      text-align: center;
-    }
-
-    h1 {
-      margin-bottom: 30px;
-    }
-
-    .palette {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 12px;
-    }
-
-    .color {
-      height: 250px;
-      border-radius: 12px;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      padding: 15px;
-      color: white;
-      font-weight: bold;
-    }
-  </style>
+  <title>Color Palette Generator</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <main class="container">
+  <main class="app">
     <h1>Color Palette</h1>
+    <p>Generate a random color palette.</p>
 
-    <div class="palette">
-      <div class="color" style="background: #ff6b6b;">#FF6B6B</div>
-      <div class="color" style="background: #4ecdc4;">#4ECDC4</div>
-      <div class="color" style="background: #45b7d1;">#45B7D1</div>
-      <div class="color" style="background: #f7b731;">#F7B731</div>
-      <div class="color" style="background: #5f27cd;">#5F27CD</div>
-    </div>
+    <div id="palette" class="palette"></div>
+
+    <button id="generateBtn">Generate Palette</button>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
